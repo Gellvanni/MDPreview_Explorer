@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="180" viewBox="0 0 640 180">
+  <rect width="640" height="180" fill="#f6f8fa"/>
+  <rect x="24" y="40" width="180" height="72" rx="12" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
+  <rect x="230" y="40" width="180" height="72" rx="12" fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <rect x="436" y="40" width="180" height="72" rx="12" fill="#ffffff" stroke="#1f2328" stroke-width="2"/>
+  <text x="114" y="82" font-family="Segoe UI, Arial, sans-serif" font-size="20" text-anchor="middle" fill="#0969da">Explorer</text>
+  <text x="320" y="82" font-family="Segoe UI, Arial, sans-serif" font-size="20" text-anchor="middle" fill="#57606a">Preview Handler</text>
+  <text x="526" y="82" font-family="Segoe UI, Arial, sans-serif" font-size="20" text-anchor="middle" fill="#1f2328">Markdown Render</text>
+  <path d="M204 76 H230" stroke="#57606a" stroke-width="3" fill="none"/>
+  <path d="M410 76 H436" stroke="#57606a" stroke-width="3" fill="none"/>
+</svg>

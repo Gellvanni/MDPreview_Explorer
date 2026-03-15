@@ -1,0 +1,90 @@
+body.theme-windows-light {
+  background: #ffffff;
+  color: #1c1f24;
+}
+
+body.theme-windows-light h1,
+body.theme-windows-light h2,
+body.theme-windows-light h3,
+body.theme-windows-light h4,
+body.theme-windows-light h5,
+body.theme-windows-light h6 {
+  color: #121417;
+}
+
+body.theme-windows-light h1,
+body.theme-windows-light h2,
+body.theme-windows-light hr {
+  border-color: #d8dde5;
+}
+
+body.theme-windows-light a {
+  color: #1f5fae;
+  border-bottom-color: #9bb8dc;
+}
+
+body.theme-windows-light a:hover,
+body.theme-windows-light a:focus {
+  color: #184c8d;
+  border-bottom-color: #6f96c9;
+}
+
+body.theme-windows-light blockquote {
+  background: #f4f6f8;
+  border-left-color: #7693b6;
+  color: #314050;
+}
+
+body.theme-windows-light code {
+  background: #f2f4f7;
+  color: #8a4e07;
+}
+
+body.theme-windows-light pre {
+  background: #f5f7fa;
+  border-color: #d8dde5;
+}
+
+body.theme-windows-light pre code {
+  color: #1d2430;
+}
+
+body.theme-windows-light table {
+  border-color: #d8dde5;
+  background: #ffffff;
+}
+
+body.theme-windows-light th,
+body.theme-windows-light td {
+  border-color: #d8dde5;
+}
+
+body.theme-windows-light th {
+  background: #eef2f6;
+  color: #121417;
+}
+
+body.theme-windows-light tbody tr:nth-child(2n) td {
+  background: #fafbfd;
+}
+
+body.theme-windows-light tbody tr:nth-child(2n+1) td {
+  background: #ffffff;
+}
+
+body.theme-windows-light img {
+  border-color: #d8dde5;
+  background: #ffffff;
+}
+
+body.theme-windows-light .muted {
+  color: #5e6978;
+}
+
+body.theme-windows-light .error {
+  color: #b23b2e;
+}
+
+body.theme-windows-light .preview-loading-kicker {
+  color: #53749c;
+}

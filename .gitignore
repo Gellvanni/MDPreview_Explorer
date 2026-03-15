@@ -1,0 +1,31 @@
+# Build output
+bin/
+obj/
+artifacts/
+
+# Temporary lab files
+.tmp-ads-test/
+
+# Visual Studio / IDE
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Installer output
+*.msi
+*.wixpdb
+*.cab
+
+# Logs and diagnostics
+*.log
+*.etl
+*.tmp
+
+# OS noise
+Thumbs.db
+Desktop.ini
+
+# Local runtime data
+settings.local.json

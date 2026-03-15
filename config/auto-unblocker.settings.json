@@ -1,0 +1,45 @@
+{
+  "autoUnblockEnabled": true,
+  "dryRun": false,
+  "logEnabled": true,
+  "logPath": "%USERPROFILE%\\AppData\\LocalLow\\MdExplorerPreview\\auto-unblocker.log",
+  "scanOnStartup": true,
+  "unblockZipOnArrival": false,
+  "settleDelayMs": 700,
+  "retryDelayMs": 700,
+  "maxWaitMs": 20000,
+  "allowedExtensions": [
+    ".md",
+    ".markdown",
+    ".mdown",
+    ".mkdn",
+    ".mdwn",
+    ".txt",
+    ".log",
+    ".json",
+    ".yaml",
+    ".yml",
+    ".ini",
+    ".csv",
+    ".xml",
+    ".svg",
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".zip"
+  ],
+  "watchFolders": [
+    {
+      "name": "Downloads",
+      "path": "%USERPROFILE%\\Downloads",
+      "enabled": true,
+      "recursive": true
+    },
+    {
+      "name": "CustomTrustedFolder",
+      "path": "%USERPROFILE%\\Documents\\TrustedMarkdown",
+      "enabled": false,
+      "recursive": true
+    }
+  ]
+}

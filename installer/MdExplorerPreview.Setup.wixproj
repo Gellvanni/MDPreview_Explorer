@@ -1,0 +1,23 @@
+<Project Sdk="WixToolset.Sdk/5.0.2">
+  <Import Project="InstallerVersion.props" />
+
+  <PropertyGroup>
+    <OutputType>Package</OutputType>
+    <Platform>x64</Platform>
+    <InstallerPlatform>x64</InstallerPlatform>
+    <DefineConstants>
+      ProductVersion=$(MdExplorerPreviewInstallerVersion);
+      ProductManufacturer=$(MdExplorerPreviewManufacturer);
+      ProductUpgradeCode=$(MdExplorerPreviewUpgradeCode);
+      HandlerOutputDir=$(MSBuildThisFileDirectory)..\src\MdExplorerPreview\bin\x64\Release;
+      AutoUnblockerOutputDir=$(MSBuildThisFileDirectory)..\src\MdExplorerPreview.AutoUnblocker\bin\x64\Release;
+      CustomActionOutputDir=$(MSBuildThisFileDirectory)CustomActions\bin\$(Configuration)\
+    </DefineConstants>
+  </PropertyGroup>
+
+  <Target Name="BuildRuntimeProjects" BeforeTargets="BeforeBuild">
+    <MSBuild Projects="..\src\MdExplorerPreview\MdExplorerPreview.csproj" Targets="Restore;Build" Properties="Configuration=Release;Platform=x64" />
+    <MSBuild Projects="..\src\MdExplorerPreview.AutoUnblocker\MdExplorerPreview.AutoUnblocker.csproj" Targets="Restore;Build" Properties="Configuration=Release;Platform=x64" />
+    <MSBuild Projects="CustomActions\MdExplorerPreview.Setup.CustomActions.csproj" Targets="Restore;Build" Properties="Configuration=$(Configuration)" />
+  </Target>
+</Project>

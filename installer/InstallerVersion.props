@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <MdExplorerPreviewInstallerVersion>1.0.1</MdExplorerPreviewInstallerVersion>
+    <MdExplorerPreviewManufacturer>MdExplorerPreview</MdExplorerPreviewManufacturer>
+    <MdExplorerPreviewUpgradeCode>{6E6D2458-98D0-4B55-B8D4-8EE868603B44}</MdExplorerPreviewUpgradeCode>
+  </PropertyGroup>
+</Project>
