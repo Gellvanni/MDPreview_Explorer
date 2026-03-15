@@ -7,6 +7,8 @@ O projeto instala duas coisas:
 - um preview handler para `.md` e variantes;
 - um auto-unblocker leve para pastas confiaveis, focado em `Downloads`.
 
+![Preview do projeto](./preview.png)
+
 ## O que o produto resolve
 
 Quando um arquivo Markdown chega com `Zone.Identifier`, o Explorer pode bloquear o preview.
