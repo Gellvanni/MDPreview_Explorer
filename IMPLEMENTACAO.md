@@ -135,11 +135,11 @@ Responsabilidade:
 
 ### Bootstrap e UX operacional
 
-- [Install.cmd](Install.cmd)
-- [Uninstall.cmd](Uninstall.cmd)
-- [Start-AutoUnblocker.cmd](Start-AutoUnblocker.cmd)
-- [Stop-AutoUnblocker.cmd](Stop-AutoUnblocker.cmd)
-- [Open-AutoUnblockerSettings.cmd](Open-AutoUnblockerSettings.cmd)
+- [Install.cmd](scripts/bootstrap/Install.cmd)
+- [Uninstall.cmd](scripts/bootstrap/Uninstall.cmd)
+- [Start-AutoUnblocker.cmd](scripts/bootstrap/Start-AutoUnblocker.cmd)
+- [Stop-AutoUnblocker.cmd](scripts/bootstrap/Stop-AutoUnblocker.cmd)
+- [Open-AutoUnblockerSettings.cmd](scripts/bootstrap/Open-AutoUnblockerSettings.cmd)
 - [Install-MarkdownPreview.ps1](scripts/Install-MarkdownPreview.ps1)
 - [Uninstall-MarkdownPreview.ps1](scripts/Uninstall-MarkdownPreview.ps1)
 - [Start-MarkdownPreviewAutoUnblocker.ps1](scripts/Start-MarkdownPreviewAutoUnblocker.ps1)
@@ -335,10 +335,11 @@ Porque o renderer atual nao e Chromium. Como a base segue em `WebBrowser`, a cam
 
 ## Validacao recomendada
 
-1. execute [Install.cmd](Install.cmd)
+1. execute [Install.cmd](scripts/bootstrap/Install.cmd)
 2. valide o auto-unblocker com [Test-MarkdownPreviewAutoUnblocker.ps1](scripts/Test-MarkdownPreviewAutoUnblocker.ps1)
 3. prepare um laboratorio com [Prepare-ValidationWorkspace.ps1](scripts/Prepare-ValidationWorkspace.ps1)
 4. exporte HTMLs de revisao com [Test-MarkdownPreviewRendering.ps1](scripts/Test-MarkdownPreviewRendering.ps1)
 5. valide os casos em [VALIDATION-MATRIX.md](docs/VALIDATION-MATRIX.md)
 6. teste tambem um workspace gerado por [New-MindOsWorkspace.ps1](scripts/New-MindOsWorkspace.ps1)
-7. execute [Uninstall.cmd](Uninstall.cmd) quando quiser validar remocao
+7. execute [Uninstall.cmd](scripts/bootstrap/Uninstall.cmd) quando quiser validar remocao
+
