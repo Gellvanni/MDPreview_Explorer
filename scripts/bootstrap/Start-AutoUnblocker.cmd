@@ -1,9 +1,11 @@
 @echo off
 setlocal
-cd /d "%~dp0"
+set "REPO_ROOT=%~dp0..\..\"
+for %%I in ("%REPO_ROOT%") do set "REPO_ROOT=%%~fI"
+cd /d "%REPO_ROOT%"
 
 set "BOOTSTRAP_NAME=MdExplorerPreview Auto-Unblocker Start"
-set "PS_SCRIPT=%~dp0scripts\Start-MarkdownPreviewAutoUnblocker.ps1"
+set "PS_SCRIPT=%REPO_ROOT%scripts\Start-MarkdownPreviewAutoUnblocker.ps1"
 
 echo.
 echo [%BOOTSTRAP_NAME%]

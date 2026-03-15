@@ -1,16 +1,19 @@
 @echo off
 setlocal
-cd /d "%~dp0"
+set "REPO_ROOT=%~dp0..\..\"
+for %%I in ("%REPO_ROOT%") do set "REPO_ROOT=%%~fI"
+cd /d "%REPO_ROOT%"
 
-set "BOOTSTRAP_NAME=MdExplorerPreview Uninstall"
-set "PS_SCRIPT=%~dp0scripts\Uninstall-MarkdownPreview.ps1"
+set "BOOTSTRAP_NAME=MdExplorerPreview Install"
+set "PS_SCRIPT=%REPO_ROOT%scripts\Install-MarkdownPreview.ps1"
+set "VALIDATION_FILE=%REPO_ROOT%content\validation-suite\preview-fixture.md"
 
 echo.
 echo [%BOOTSTRAP_NAME%]
 
 if not exist "%PS_SCRIPT%" (
     echo.
-    echo [ERRO] Script de remocao nao encontrado:
+    echo [ERRO] Script de instalacao nao encontrado:
     echo        %PS_SCRIPT%
     echo.
     pause
@@ -27,7 +30,7 @@ if errorlevel 1 (
     powershell -NoProfile -ExecutionPolicy Bypass -Command "Start-Process -FilePath '%~f0' -ArgumentList '__elevated' -Verb RunAs"
     if errorlevel 1 (
         echo [ERRO] Nao foi possivel solicitar elevacao.
-        echo [INFO] Tente clicar com o botao direito em Uninstall.cmd e escolha Executar como administrador.
+        echo [INFO] Tente clicar com o botao direito em Install.cmd e escolha Executar como administrador.
         echo.
         pause
         exit /b 1
@@ -36,13 +39,13 @@ if errorlevel 1 (
 )
 
 :run
-echo [INFO] Executando remocao do preview handler...
+echo [INFO] Executando instalacao do preview handler...
 powershell -NoProfile -ExecutionPolicy Bypass -File "%PS_SCRIPT%"
 set "RC=%ERRORLEVEL%"
 
 if not "%RC%"=="0" (
     echo.
-    echo [ERRO] A remocao falhou.
+    echo [ERRO] A instalacao falhou.
     echo [INFO] Revise as mensagens acima e tente novamente.
     echo.
     pause
@@ -50,10 +53,19 @@ if not "%RC%"=="0" (
 )
 
 echo.
-echo [OK] Remocao concluida.
-echo [INFO] Se alguma janela do Explorer ainda mostrar preview antigo, feche e abra o Explorer novamente.
-echo [INFO] O auto-unblocker tambem foi removido da inicializacao.
-echo [INFO] Arquivos de configuracao e log podem permanecer em %%LOCALAPPDATA%%\MdExplorerPreview e %%USERPROFILE%%\AppData\LocalLow\MdExplorerPreview.
+echo [OK] Instalacao concluida.
+echo [INFO] Teste final sugerido:
+echo        1. Abra o Explorer.
+echo        2. Ative o Painel de visualizacao.
+echo        3. Selecione:
+echo           %VALIDATION_FILE%
+echo.
+echo [INFO] Auto-unblocker instalado:
+echo        - configurações: %%LOCALAPPDATA%%\MdExplorerPreview\settings.json
+echo        - log: %%USERPROFILE%%\AppData\LocalLow\MdExplorerPreview\auto-unblocker.log
+echo        - edite com Open-AutoUnblockerSettings.cmd
+echo.
+echo [INFO] O visual do preview agora segue automaticamente o tema de apps do Windows.
 echo.
 pause
 exit /b 0
