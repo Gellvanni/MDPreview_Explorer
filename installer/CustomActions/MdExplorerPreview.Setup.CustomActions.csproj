@@ -15,4 +15,15 @@
   <ItemGroup>
     <Content Include="CustomAction.config" />
   </ItemGroup>
+
+  <Target Name="BuildCustomActionPackage" AfterTargets="Build" DependsOnTargets="PackCustomAction">
+    <PropertyGroup>
+      <CustomActionPackagePath>$(IntermediateOutputPath)$(TargetName).CA$(TargetExt)</CustomActionPackagePath>
+    </PropertyGroup>
+
+    <Copy SourceFiles="$(CustomActionPackagePath)"
+          DestinationFolder="$(OutputPath)"
+          SkipUnchangedFiles="true"
+          Condition="Exists('$(CustomActionPackagePath)')" />
+  </Target>
 </Project>

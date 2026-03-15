@@ -18,6 +18,7 @@ Resumo importante:
 - neste projeto, a recomendacao atual e MIT para reduzir friccao de adocao.
 
 Guia curto em [GITHUB-PUBLISHING.md](docs/GITHUB-PUBLISHING.md).
+Fluxo de release em [RELEASING.md](docs/RELEASING.md).
 
 ## Para quem so quer instalar e usar
 
