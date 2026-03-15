@@ -7,7 +7,7 @@ O projeto instala duas coisas:
 - um preview handler para `.md` e variantes;
 - um auto-unblocker leve para pastas confiaveis, focado em `Downloads`.
 
-Preview.png
+![Preview do projeto](./Preview.png)
 
 ## O que o produto resolve
 
